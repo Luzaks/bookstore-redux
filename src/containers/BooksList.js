@@ -13,10 +13,8 @@ const BooksList = ({ books }) => (
   </table>
 );
 
-const connectedBookList = connect(mapStateToProps)(BooksList);
-
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
 };
 
-export default connectedBookList;
+export default connect(mapStateToProps)(BooksList);
