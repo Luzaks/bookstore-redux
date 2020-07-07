@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import './styles/index.css';
 import { createStore } from 'redux';
 import App from './components/App';
+import { createCreator, removeCreator } from './actions';
 import * as serviceWorker from './serviceWorker';
 
 // eslint-disable-next-line no-unused-vars
@@ -30,6 +31,9 @@ const initialState = {
 const store = createStore(
   // reducer
 );
+
+store.dispatch(createCreator());
+store.dispatch(removeCreator());
 
 ReactDOM.render(
   <Provider store={store}>
