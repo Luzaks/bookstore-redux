@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import './styles/index.css';
 import { createStore } from 'redux';
 import App from './components/App';
+import booksReducer from './reducers/books';
 import { createCreator, removeCreator } from './actions';
 import * as serviceWorker from './serviceWorker';
 
@@ -29,7 +30,8 @@ const initialState = {
 };
 
 const store = createStore(
-  // reducer
+  booksReducer(),
+  initialState.books,
 );
 
 store.dispatch(createCreator());
