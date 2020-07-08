@@ -20,16 +20,10 @@ class BooksForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChanges(event) {
-    if (event.target.id === 'title') {
-      this.setState({
-        title: event.target.value,
-      });
-    } else if (event.target.id === 'category') {
-      this.setState({
-        category: event.target.value,
-      });
-    }
+  handleChanges({ target: { name, value } }) {
+    this.setState({
+      [name]: value,
+    });
   }
 
   handleSubmit(event) {
@@ -48,8 +42,8 @@ class BooksForm extends Component {
 
     return (
       <form>
-        <input type="text" id="title" placeholder="Book title" value={title} onChange={this.handleChanges} />
-        <select name="category" id="category" value={category} onChange={this.handleChanges}>
+        <input type="text" name="title" placeholder="Book title" value={title} onChange={this.handleChanges} />
+        <select name="category" value={category} onChange={this.handleChanges}>
           <option value="Category" disabled hidden>Category</option>
           { categories.map(category => <option key={category} value={category}>{category}</option>)}
         </select>
