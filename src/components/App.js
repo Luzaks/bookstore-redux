@@ -6,7 +6,6 @@ import CategoryFilter from './CategoryFilter';
 
 const App = () => (
   <div className="App">
-    <CategoryFilter />
     <BooksList />
     <BooksForm />
   </div>
