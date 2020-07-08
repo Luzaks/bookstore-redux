@@ -2,7 +2,7 @@ function createCreator(book) {
   return {
     type: 'CREATE_BOOK',
     payload: {
-      id: book.id,
+      id: Math.random(),
       title: book.title,
       category: book.category,
     },
