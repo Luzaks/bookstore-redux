@@ -18,7 +18,15 @@ function removeCreator(book) {
   };
 }
 
+function filterCreator(category) {
+  return {
+    type: 'CHANGE_FILTER',
+    payload: category,
+  };
+}
+
 export {
   createCreator,
   removeCreator,
+  filterCreator,
 };
