@@ -15,14 +15,7 @@ const mapDispatchToProps = dispatch => ({
 const BooksList = ({ books, handleRemoveBook }) => (
   <table>
     { books.map(book => (
-      <tbody key={book.id}>
-        <Book book={book} />
-        <tr>
-          <td>
-            <button type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
-          </td>
-        </tr>
-      </tbody>
+      <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
     ))}
   </table>
 );
