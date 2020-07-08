@@ -19,10 +19,9 @@ function removeCreator(book) {
 }
 
 function filterCreator(filter) {
-  console.log(filter);
   return {
     type: 'CHANGE_FILTER',
-    payload: { filter },
+    payload: filter,
   };
 }
 

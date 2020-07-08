@@ -7,7 +7,7 @@ import CategoryFilter from '../components/CategoryFilter';
 
 const filterHelper = event => event.target.value;
 
-const mapStateToProps = state => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books, filter: state.filter });
 
 const mapDispatchToProps = dispatch => ({
   handleRemoveBook: book => {
@@ -18,21 +18,30 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const BooksList = ({ books, handleRemoveBook, handleFilterChange }) => (
+const BooksList = ({
+  books, filter, handleRemoveBook, handleFilterChange,
+}) => (
   <div>
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
     <table>
-      { books.map(book => (
-        <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
-      ))}
+      {
+        filter === 'All'
+          ? books.map(book => (
+            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+          ))
+          : books.filter(book => (book.category === filter)).map(book => (
+            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+          ))
+      }
     </table>
   </div>
 );
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
+  filter: PropTypes.instanceOf(String).isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
 };
