@@ -33,4 +33,3 @@ BooksList.propTypes = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
-
