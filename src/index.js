@@ -25,7 +25,7 @@ const initialState = {
       category: 'Fantasy',
     },
   ],
-  filter: ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'],
+  filter: 'All',
 };
 
 const store = createStore(

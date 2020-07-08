@@ -1,7 +1,7 @@
 const filterReducer = (state = [], action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return state.filter(category => category === action.payload);
+      return action.payload;
     default:
       return state;
   }

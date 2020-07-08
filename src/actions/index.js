@@ -18,10 +18,10 @@ function removeCreator(book) {
   };
 }
 
-function filterCreator(category) {
+function filterCreator(filter) {
   return {
     type: 'CHANGE_FILTER',
-    payload: category,
+    payload: filter,
   };
 }
 
