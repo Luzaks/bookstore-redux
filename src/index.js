@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import './styles/index.css';
 import { createStore } from 'redux';
 import App from './components/App';
-import booksReducer from './reducers/books';
+import rootReducer from './reducers/index';
 import * as serviceWorker from './serviceWorker';
 
 const initialState = {
@@ -28,7 +28,7 @@ const initialState = {
 };
 
 const store = createStore(
-  booksReducer,
+  rootReducer,
   initialState,
 );
 
