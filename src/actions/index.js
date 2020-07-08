@@ -14,8 +14,6 @@ function removeCreator(book) {
     type: 'REMOVE_BOOK',
     payload: {
       id: book.id,
-      title: book.title,
-      category: book.category,
     },
   };
 }

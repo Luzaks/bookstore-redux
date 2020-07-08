@@ -59,10 +59,8 @@ class BooksForm extends Component {
   }
 }
 
-const ConnectedBooksForm = connect(null, mapDispatchToProps)(BooksForm);
-
 BooksForm.propTypes = {
   addBook: PropTypes.func.isRequired,
 };
 
-export default ConnectedBooksForm;
+export default connect(null, mapDispatchToProps)(BooksForm);

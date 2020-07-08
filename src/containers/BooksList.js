@@ -27,11 +27,9 @@ const BooksList = ({ books, handleRemoveBook }) => (
   </table>
 );
 
-const connectedBookList = connect(mapStateToProps, mapDispatchToProps)(BooksList);
-
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
 };
 
-export default connectedBookList;
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
