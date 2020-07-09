@@ -6,15 +6,17 @@ const Book = ({ book, handleRemoveBook }) => (
   <tbody className="book-container">
     <tr className="book-info-container">
       <tr className="book-info">
-        <td><h2>{book.category}</h2></td>
-        <td><h1>{book.title}</h1></td>
-        <td><h2>A. author</h2></td>
+        <td className="book-category"><p>{book.category}</p></td>
+        <td className="book-title"><p>{book.title}</p></td>
+        <td className="book-author"><p>A. author</p></td>
       </tr>
       <tr className="links-container">
         <td>Comments</td>
+        <td className="links-separator">|</td>
         <td>
           <button type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
         </td>
+        <td className="links-separator">|</td>
         <td>Edit</td>
       </tr>
     </tr>
