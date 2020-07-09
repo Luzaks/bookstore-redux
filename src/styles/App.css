@@ -10,4 +10,73 @@
 
 .nav-left {
   display: flex;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.bookstore-logo {
+  width: 240px;
+  height: 37px;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.books-link {
+  width: 59px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-selector {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.user-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 1px rgba(0, 0, 0, 0.09) solid;
+}
+
+.user-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: #0290ff;
+}
+
+.table-container {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  padding: 38px 100px;
 }
