@@ -1,7 +1,11 @@
+.books-table {
+    width: 100%;
+}
+
 .book-container {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
   height: 170px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -17,6 +21,7 @@
 .book-info {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px
 }
 
 .book-category {
@@ -54,4 +59,52 @@
   color: rgba(0, 0, 0, 0.3);
   font-size: 22px;
   margin: 0 20px;
+}
+
+.book-progress {
+    display: flex;
+    align-items: center;
+}
+
+.percentage {
+    width: 68px;
+    height: 39px;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;  
+    font-weight: 300;
+    color: rgba(0, 0, 0);
+}
+
+.book-status {
+    width: 80px;
+    height: 18px;
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.circle-container {
+    width: 90px;
+    height: 89.9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.circle-container svg {
+    width: 75px;
+    height: 70px;
+}
+
+circle {
+    stroke-width: 8px;
+    fill: transparent;
+}
+
+#gray{
+    stroke: #e8e8e8;
+    stroke-dasharray: 90, 284;
+    stroke-dashoffset: -120.75;
 }
