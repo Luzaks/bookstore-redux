@@ -42,8 +42,8 @@ const Book = ({ book, handleRemoveBook }) => (
     </div>
     <div className="current-chapter">
       <div className="chapter-data">
-        <p>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
+        <p className="current-chapter-p">CURRENT CHAPTER</p>
+        <p className="chapter-number">Chapter 17</p>
       </div>
       <div className="progress-button">
         <button type="button">UPDATE PROGRESS</button>

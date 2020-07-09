@@ -72,7 +72,7 @@
     font-family: Montserrat, sans-serif;
     font-size: 32px;  
     font-weight: 300;
-    color: rgba(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .book-status {
@@ -107,4 +107,67 @@ circle {
     stroke: #e8e8e8;
     stroke-dasharray: 90, 284;
     stroke-dashoffset: -120.75;
+}
+
+
+.current-chapter {
+    position: relative;
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.current-chapter::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 60%;
+    left: -2px;
+    top: 15%;
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.books-progress,
+.book-info-container {
+    width: 33.33%;
+}
+
+.chapter-data {
+    margin-bottom: 18px;
+}
+
+.current-chapter-p {
+    font-family: RobotoSlab, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 9px;
+}
+
+.chapter-number {
+    font-family: RobotoSlab, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.progress-button {
+    width: fit-content;
+    height: fit-content;
+}
+
+.progress-button button {
+    width: 184px;
+    height: 33px;
+    border-radius: 3px;
+    background-color: #0290ff;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 14.7px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: white;
+    border: none;
 }
