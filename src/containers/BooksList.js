@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeCreator, filterCreator } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+import { FaUser } from 'react-icons/fa'
 
 const filterHelper = event => event.target.value;
 
@@ -25,11 +26,18 @@ const renderHelper = (filter, books) => (
 const BooksList = ({
   books, filter, handleRemoveBook, handleFilterChange,
 }) => (
-  <div>
-    <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-    </div>
-    <table>
+  <div className="container-nav-body">
+    <nav className="bookstore-nav">
+      <div className="nav-left">
+        <h1 className="bookstore-logo">Bookstore CMS</h1>
+        <h3 className="books-link">Books</h3>
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
+      <div className="nav-right user-icon">
+        <FaUser />
+      </div>
+    </nav>
+    <table className="books-table">
       {
         renderHelper(filter, books).map(book => (
           <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
