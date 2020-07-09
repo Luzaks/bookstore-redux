@@ -12,17 +12,17 @@ const initialState = {
     {
       id: Math.random(),
       title: 'Harry Potter',
-      category: 'History',
+      category: 'HISTORY',
     },
     {
       id: Math.random(),
       title: 'Harry Potter 2',
-      category: 'Biography',
+      category: 'BIOGRAPHY',
     },
     {
       id: Math.random(),
       title: 'Harry Potter 3',
-      category: 'Sci-Fi',
+      category: 'SCI-FI',
     },
   ],
   filter: 'All',
