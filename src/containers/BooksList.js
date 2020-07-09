@@ -18,6 +18,10 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
+const renderHelper = (filter, books) => (
+  filter === 'All' ? books : books.filter(book => (book.category === filter))
+);
+
 const BooksList = ({
   books, filter, handleRemoveBook, handleFilterChange,
 }) => (
@@ -27,13 +31,9 @@ const BooksList = ({
     </div>
     <table>
       {
-        filter === 'All'
-          ? books.map(book => (
-            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
-          ))
-          : books.filter(book => (book.category === filter)).map(book => (
-            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
-          ))
+        renderHelper(filter, books).map(book => (
+          <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+        ))
       }
     </table>
   </div>
