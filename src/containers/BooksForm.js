@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createCreator } from '../actions/index';
+import '../styles/BooksForm.css';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -41,13 +42,16 @@ class BooksForm extends Component {
     const { title, category } = this.state;
 
     return (
-      <form>
-        <input type="text" name="title" placeholder="Book title" value={title} onChange={this.handleChanges} />
-        <select name="category" value={category} onChange={this.handleChanges}>
-          <option value="Category" disabled hidden>Category</option>
-          { categories.map(category => <option key={category} value={category}>{category}</option>)}
-        </select>
-        <input type="submit" value="ADD BOOK" onClick={this.handleSubmit} />
+      <form className="books-form">
+        <p className="form-title">ADD NEW BOOK</p>
+        <div className="input-container">
+          <input className="book-title-input" type="text" name="title" placeholder="Book title" value={title} onChange={this.handleChanges} />
+          <select className="book-category-input" name="category" value={category} onChange={this.handleChanges}>
+            <option value="Category" disabled hidden>Category</option>
+            { categories.map(category => <option key={category} value={category}>{category}</option>)}
+          </select>
+          <input className="form-submit-button" type="submit" value="ADD BOOK" onClick={this.handleSubmit} />
+        </div>
       </form>
     );
   }
