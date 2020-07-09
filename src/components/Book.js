@@ -1,18 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Books.css';
 
 const Book = ({ book, handleRemoveBook }) => (
-  <tbody>
-    <tr>
-      <td>{book.id}</td>
-      <td>{book.title}</td>
-      <td>{book.category}</td>
+  <tbody className="book-container">
+    <tr className="book-info-container">
+      <tr className="book-info">
+        <td><h2>{book.category}</h2></td>
+        <td><h1>{book.title}</h1></td>
+        <td><h2>A. author</h2></td>
+      </tr>
+      <tr className="links-container">
+        <td>Comments</td>
+        <td>
+          <button type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
+        </td>
+        <td>Edit</td>
+      </tr>
     </tr>
-    <tr>
-      <td>
-        <button type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
-      </td>
-    </tr>
+    <div className="book-progress">
+      <div className="progress-oval" />
+      <div className="progress-data">
+        <h3>64%</h3>
+        <h4>Completed</h4>
+      </div>
+    </div>
+    <div className="current-chapter">
+      <div className="chapter-data">
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+      </div>
+      <div className="progress-button">
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
+    </div>
   </tbody>
 );
 

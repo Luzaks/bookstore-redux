@@ -15,7 +15,6 @@
 }
 
 .bookstore-logo {
-  width: 240px;
   height: 37px;
   font-size: 30px;
   font-weight: bold;
@@ -29,6 +28,7 @@
 .books-link {
   width: 59px;
   height: 16px;
+  margin: 53px;
   display: inline-flex;
   align-items: center;
   font-size: 13px;
