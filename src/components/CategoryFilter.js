@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ handleFilterChange }) => {
-  const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const categories = ['ALL', 'ACTION', 'BIOGRAPHY', 'HISTORY', 'HORROR', 'KIDS', 'LEARNING', 'SCI-FI'];
 
   return (
-    <select name="filter" onChange={handleFilterChange}>
-      <option value="Categories" selected disabled hidden>Categories</option>
+    <select className="filter-selector" name="filter" onChange={handleFilterChange}>
+      <option value="Categories" selected disabled hidden>CATEGORIES</option>
       { categories.map(category => <option key={category} value={category}>{category}</option>)}
     </select>
   );

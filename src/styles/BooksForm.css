@@ -1,0 +1,65 @@
+.books-form {
+  margin: 0 100px;
+  padding: 38px 0;
+  border-top: solid 1px #e8e8e8;
+}
+
+.form-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-title-input {
+  width: 50%;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 15px;
+}
+
+.book-title-input::placeholder,
+.book-category-input {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.book-category-input {
+  width: 25%;
+  height: 45px;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='lightgray' x='0px' y='0px' height='30' viewBox='0 0 15 20' width='55' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+.form-submit-button {
+  width: 15%;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
