@@ -5,23 +5,25 @@ import '../styles/Books.css';
 const sliceCategory = category => `${category.slice(0, 1)}${category.slice(1).toLowerCase()}`;
 
 const Book = ({ book, handleRemoveBook }) => (
-  <tbody className="book-container">
-    <tr className="book-info-container">
-      <tr className="book-info">
-        <td className="book-category"><p>{sliceCategory(book.category)}</p></td>
-        <td className="book-title"><p>{book.title}</p></td>
-        <td className="book-author"><p>A. author</p></td>
-      </tr>
-      <tr className="links-container">
-        <td>Comments</td>
-        <td className="links-separator">|</td>
-        <td>
-          <button type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
-        </td>
-        <td className="links-separator">|</td>
-        <td>Edit</td>
-      </tr>
-    </tr>
+  <div className="book-container">
+    <table className="book-info-container">
+      <tbody className="book-info-container">
+        <tr className="book-info">
+          <td className="book-category"><p>{sliceCategory(book.category)}</p></td>
+          <td className="book-title"><p>{book.title}</p></td>
+          <td className="book-author"><p>A. author</p></td>
+        </tr>
+        <tr className="links-container">
+          <td>Comments</td>
+          <td className="links-separator">|</td>
+          <td>
+            <button className="remove-book-btn" type="submit" onClick={() => handleRemoveBook(book)}> Remove Book </button>
+          </td>
+          <td className="links-separator">|</td>
+          <td>Edit</td>
+        </tr>
+      </tbody>
+    </table>
     <div className="book-progress">
       <div className="circle-container">
         <svg viewBox="0 0 100 100">
@@ -31,8 +33,8 @@ const Book = ({ book, handleRemoveBook }) => (
               <stop offset="100%" stopColor="#379cf6" />
             </linearGradient>
           </defs>
-          <circle cx="50" cy="50" r="45" stroke="url(#gradient)" id="red" />
           <circle cx="50" cy="50" r="45" id="gray" />
+          <circle cx="50" cy="50" r="45" stroke="url(#gradient)" id="blue" />
         </svg>
       </div>
       <div className="progress-data">
@@ -49,7 +51,7 @@ const Book = ({ book, handleRemoveBook }) => (
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </div>
-  </tbody>
+  </div>
 );
 
 Book.propTypes = {

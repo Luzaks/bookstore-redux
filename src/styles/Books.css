@@ -1,5 +1,5 @@
 .books-table {
-    width: 100%;
+  width: 100%;
 }
 
 .book-container {
@@ -21,7 +21,7 @@
 .book-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .book-category {
@@ -30,6 +30,7 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: bold;
+  margin-bottom: 7px;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -39,6 +40,11 @@
   font-weight: bold;
   letter-spacing: -0.2px;
   color: black;
+}
+
+.links-container {
+  width: fit-content;
+  display: inline-block;
 }
 
 .book-author,
@@ -56,118 +62,120 @@
 }
 
 .links-separator {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 22px;
-  margin: 0 20px;
+  color: rgba(0, 0, 0, 0.07);
+  font-size: 25px;
+  padding: 0 13px;
 }
 
 .book-progress {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .percentage {
-    width: 68px;
-    height: 39px;
-    font-family: Montserrat, sans-serif;
-    font-size: 32px;  
-    font-weight: 300;
-    color: rgb(0, 0, 0);
+  width: 68px;
+  height: 39px;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
 }
 
 .book-status {
-    width: 80px;
-    height: 18px;
-    opacity: 0.5;
-    font-family: Montserrat;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .circle-container {
-    width: 90px;
-    height: 89.9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
+  width: 90px;
+  height: 89.9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
 }
 
 .circle-container svg {
-    width: 75px;
-    height: 70px;
+  width: 75px;
+  height: 70px;
 }
 
 circle {
-    stroke-width: 8px;
-    fill: transparent;
+  stroke-width: 8px;
+  fill: transparent;
 }
 
-#gray{
-    stroke: #e8e8e8;
-    stroke-dasharray: 90, 284;
-    stroke-dashoffset: -120.75;
+#gray {
+  stroke: #e8e8e8;
 }
 
+#blue {
+  stroke-dasharray: 282, 98;
+  stroke-dashoffset: 171;
+}
 
 .current-chapter {
-    position: relative;
-    width: 33.33%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 60px;
+  position: relative;
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
 }
 
 .current-chapter::before {
-    position: absolute;
-    content: '';
-    width: 2px;
-    height: 60%;
-    left: -2px;
-    top: 15%;
-    background-color: rgba(0, 0, 0, 0.07);
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 60%;
+  left: -2px;
+  top: 15%;
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 .books-progress,
 .book-info-container {
-    width: 33.33%;
+  width: 33.33%;
 }
 
 .chapter-data {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .current-chapter-p {
-    font-family: RobotoSlab, sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.3);
-    margin-bottom: 9px;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 9px;
 }
 
 .chapter-number {
-    font-family: RobotoSlab, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.9);
+  font-family: RobotoSlab, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .progress-button {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 .progress-button button {
-    width: 184px;
-    height: 33px;
-    border-radius: 3px;
-    background-color: #0290ff;
-    font-family: Roboto, Helvetica, sans-serif;
-    font-size: 14.7px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: white;
-    border: none;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14.7px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
+  border: none;
 }

@@ -38,7 +38,7 @@ class BooksForm extends Component {
   }
 
   render() {
-    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const categories = ['ACTION', 'BIOGRAPHY', 'HISTORY', 'HORROR', 'KIDS', 'LEARNING', 'SCI-FI'];
     const { title, category } = this.state;
 
     return (
@@ -48,7 +48,7 @@ class BooksForm extends Component {
           <input className="book-title-input" type="text" name="title" placeholder="Book title" value={title} onChange={this.handleChanges} />
           <select className="book-category-input" name="category" value={category} onChange={this.handleChanges}>
             <option value="Category" disabled hidden>Category</option>
-            { categories.map(category => <option key={category} value={category}>{category}</option>)}
+            { categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
           </select>
           <input className="form-submit-button" type="submit" value="ADD BOOK" onClick={this.handleSubmit} />
         </div>

@@ -25,7 +25,7 @@ const initialState = {
       category: 'SCI-FI',
     },
   ],
-  filter: 'All',
+  filter: 'ALL',
 };
 
 const store = createStore(

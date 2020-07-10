@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const renderHelper = (filter, books) => (
-  filter === 'All' ? books : books.filter(book => (book.category === filter))
+  filter === 'ALL' ? books : books.filter(book => (book.category === filter))
 );
 
 const BooksList = ({
@@ -38,20 +38,20 @@ const BooksList = ({
       </div>
     </nav>
     <div className="table-container">
-      <table className="books-table">
+      <div className="books-table">
         {
           renderHelper(filter, books).map(book => (
             <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
           ))
         }
-      </table>
+      </div>
     </div>
   </div>
 );
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
-  filter: PropTypes.instanceOf(String).isRequired,
+  filter: PropTypes.string.isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
 };
