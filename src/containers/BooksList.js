@@ -6,6 +6,7 @@ import Book from '../components/Book';
 import { removeCreator, filterCreator, fetchBooksSucceed } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 import getData from '../api/getData';
+import removeData from '../api/removeData';
 
 const filterHelper = event => event.target.value;
 
@@ -13,6 +14,7 @@ const mapStateToProps = state => ({ books: state.books, filter: state.filter });
 
 const mapDispatchToProps = dispatch => ({
   handleRemoveBook: book => {
+    removeData(book).then(r => r);
     dispatch(removeCreator(book));
   },
   handleFilterChange: event => {
@@ -33,10 +35,10 @@ const BooksList = ({
   React.useEffect(() => {
     async function fetchData() {
       try {
-        console.log('hello');
         const books = await getData();
         handleGetData(books);
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.log(error);
       }
     }
